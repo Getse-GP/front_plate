@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken } from "./AuthService";
 
 
-const REST_API_BASE_URL = 'api/atender';
+const REST_API_BASE_URL = '/api/atender';
 
 
 const authHeader = () => ({

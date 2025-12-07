@@ -1,7 +1,7 @@
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 
-const API_URL = "auth/login";
+const API_URL = "/auth/login";
 
 // ==== LOGIN ====
 export const login = async (username, password) => {

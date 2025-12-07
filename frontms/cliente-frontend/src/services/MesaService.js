@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const REST_API_BASE_URL='api/mesa';
+const REST_API_BASE_URL='/api/mesa';
 
 export const listMesas = () => axios.get(REST_API_BASE_URL);
 export const crearMesa=(mesa) => axios.post(REST_API_BASE_URL, mesa);

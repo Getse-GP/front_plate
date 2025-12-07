@@ -1,7 +1,7 @@
 // ProductoService.js
 import axios from 'axios';
 
-const REST_API_BASE_URL = 'api/producto';
+const REST_API_BASE_URL = '/api/producto';
 
 export const listProductos = () => axios.get(REST_API_BASE_URL);
 

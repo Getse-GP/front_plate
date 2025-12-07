@@ -101,7 +101,7 @@ const PedidoMeseroCard = ({ pedido, reservas, idEmpleadoAutenticado }) => {
     
     // Nueva funcion para descargar el PDF
     const handleImprimirTicket = () => {
-        const url = `api/pedido/${pedido.idPedido}/ticket`;
+        const url = `/api/pedido/${pedido.idPedido}/ticket`;
         window.open(url, '_blank');
     };
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const REST_API_BASE_URL='api/tipo';
+const REST_API_BASE_URL='/api/tipo';
 
 export const listTipos = () => axios.get(REST_API_BASE_URL);
 

@@ -43,7 +43,7 @@ export const ReservarClienteComponent = () => {
                     const idClienteAutenticado = clienteData.idcliente;
 
                     if (idClienteAutenticado) {
-                        // 🔑 Establecer el ID del cliente logueado
+                        // Establecer el ID del cliente logueado
                         setIdCliente(idClienteAutenticado); 
                         // Guardar los datos para mostrar el nombre
                         setClienteAutenticado(clienteData);

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const USUARIO_API_URL = "api/usuario"; // base
+const USUARIO_API_URL = "/api/usuario"; // base
 
 // Login de usuario
 export const loginUsuario = (username, password) => {

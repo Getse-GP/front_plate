@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const REST_API_BASE_URL = 'api/reservar';
+const REST_API_BASE_URL = '/api/reservar';
 
 // Listar todos los registros de Atender
 export const listAtender = () => axios.get(REST_API_BASE_URL);

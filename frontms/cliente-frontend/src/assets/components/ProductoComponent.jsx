@@ -25,10 +25,21 @@ export const ProductoComponent = () => {
 
   // Cargar tipos disponibles
   useEffect(() => {
-    listTipos()
-      .then((response) => setTipos(response.data))
-      .catch((error) => console.error('Error al obtener tipos:', error));
-  }, []);
+     listTipos()
+    .then((resp) => {
+      if (Array.isArray(resp.data)) {
+        setTipos(resp.data);
+      } else {
+        console.error("Respuesta inválida de tipos:", resp.data);
+        setTipos([]);
+      }
+    })
+    .catch((error) => {
+      console.error('Error al obtener tipos:', error);
+      setTipos([]);
+    });
+}, []);
+
 
   // Cargar producto si estamos en modo edición
   useEffect(() => {
@@ -42,7 +53,7 @@ export const ProductoComponent = () => {
           setIdTipo(p.idTipo);
           setEstatus(p.estatus || 'Activo');
           if (p.fotoProductoNombre) {
-           setPreview(`imagenes/${p.fotoProductoNombre}`);
+           setPreview(`/imagenes/${p.fotoProductoNombre}`);
           }
         })
         .catch((error) => console.error('Error al obtener producto:', error));

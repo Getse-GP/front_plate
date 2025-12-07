@@ -252,7 +252,7 @@ export const ListProductoComponent = () => {
                   <td style={{ textAlign: 'center' }}>
                     {producto.fotoProductoNombre ? (
                       <img
-                        src={`imagenes/${producto.fotoProductoNombre}`}
+                        src={`/imagenes/${producto.fotoProductoNombre}`}
                         alt={producto.nombreProducto}
                         style={{
                           width: '70px',

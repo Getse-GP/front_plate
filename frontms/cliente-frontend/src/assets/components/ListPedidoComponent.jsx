@@ -95,7 +95,7 @@ const PedidoCard = ({ pedido, reservas, atender }) => {
 
   //Nueva funcion para descargar el PDF
   const handleImprimirTicket = () => {
-    const url = `api/pedido/${pedido.idPedido}/ticket`;
+    const url = `/api/pedido/${pedido.idPedido}/ticket`;
     window.open(url, '_blank'); // Abre el PDF en una nueva pestaña
   };
 
