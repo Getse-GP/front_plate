@@ -28,7 +28,7 @@ export const FooterComponent = () => {
                 color: textColor 
             }}
         >
-     Karla Getsemani
+     Karla Getsemani Pelaez Zacapala
     </a>
    </nav>
    <p style={{ 

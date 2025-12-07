@@ -19,7 +19,7 @@ const LoginComponent = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:7071/api/usuario/login", {
+      const res = await axios.post("api/usuario/login", {
         username,
         password,
       });

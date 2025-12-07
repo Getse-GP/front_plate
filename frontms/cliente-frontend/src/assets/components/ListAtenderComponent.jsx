@@ -63,7 +63,7 @@ export const ListAtenderComponent = () => {
   };
 
   const nuevoPedido = () => {
-    navigate('/atender/nuevo'); // <-- ruta a la página de crear nuevo atender
+    navigate('/atender/nuevo'); 
   };
 
   if (error) {
