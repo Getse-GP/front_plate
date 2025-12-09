@@ -139,9 +139,15 @@ export const PedidoComponent = () => {
         await updatePedido(id, pedidoData);
         alert('✅ Pedido actualizado correctamente');
       } else {
-        const res = await crearPedido(pedidoData);
+       const res = await crearPedido(pedidoData);
         const nuevoPedido = res.data;
-        await crearAtender({ idPedido: nuevoPedido.idPedido, idEmpleado: parseInt(idEmpleado) });
+        
+        // 🛠️ AÑADIDO PARA DEPURACIÓN
+        const empleadoIDaEnviar = parseInt(idEmpleado);
+        console.log("DEBUG: ID del nuevo Pedido:", nuevoPedido.idPedido);
+        console.log("DEBUG: ID del Empleado a atender:", empleadoIDaEnviar); 
+
+        await crearAtender({ idPedido: nuevoPedido.idPedido, idEmpleado: empleadoIDaEnviar });
         alert('✅ Pedido creado correctamente');
       }
       navigate('/pedido/lista');
