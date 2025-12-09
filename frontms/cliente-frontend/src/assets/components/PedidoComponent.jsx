@@ -125,6 +125,7 @@ export const PedidoComponent = () => {
 
     const pedidoData = {
       idCliente: parseInt(idCliente),
+      idEmpleado: parseInt(idEmpleado),
       total: 0,
       detalles: detalles.map(d => ({
         idProducto: parseInt(d.idProducto),
